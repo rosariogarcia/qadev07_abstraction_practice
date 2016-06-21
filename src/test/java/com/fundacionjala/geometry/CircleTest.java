@@ -3,44 +3,48 @@ package com.fundacionjala.geometry;
 import org.junit.Before;
 import org.junit.Test;
 
+import static java.lang.Math.PI;
+import static java.lang.Math.pow;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by RosarioGarcia on 6/16/2016.
+ * @author Rosario Garcia
+ * Tests for {@link Circle}
  */
 public class CircleTest {
 
-    private static double radio = 2;
+    private static final int RADIO_ZERO = 0;
+    private static final double RADIO = 2;
     private Shape circle;
 
     @Before
-    public void serUp() {
-        circle = new Circle(radio);
+    public void setUp() {
+        circle = new Circle(RADIO);
     }
 
     @Test
     public void testCalculateCircleArea() {
-        double expectedArea = Math.PI * Math.pow(radio, 2);
-        assertEquals(expectedArea, circle.calculateArea(), Constants.DELTA);
+        double expectedArea = PI * pow(RADIO, Constants.FACTOR_FORMULA);
+        assertEquals("Area is not equal", expectedArea, circle.calculateArea(), Constants.DELTA);
     }
 
     @Test
     public void testCalculateCirclePerimeter() {
-        double expectedPerimeter = 2 * radio * Math.PI;
-        assertEquals(expectedPerimeter, circle.calculatePerimeter(), Constants.DELTA);
+        double expectedPerimeter = Constants.FACTOR_FORMULA * RADIO * PI;
+        assertEquals("Perimeter is not equal", expectedPerimeter, circle.calculatePerimeter(), Constants.DELTA);
     }
 
     @Test
     public void testCalculateAreaWhenRadioIsZero() {
-        circle = new Circle(0);
+        circle = new Circle(RADIO_ZERO);
         int expectedValue = 0;
-        assertEquals(expectedValue, circle.calculateArea(), Constants.DELTA);
+        assertEquals("Area is not zero", expectedValue, circle.calculateArea(), Constants.DELTA);
     }
 
     @Test
     public void testCalculatePerimeterWhenRadioIsZeroShouldBePI() {
-        circle = new Circle(0);
+        circle = new Circle(RADIO_ZERO);
         int expectedValue = 0;
-        assertEquals(expectedValue, circle.calculatePerimeter(), Constants.DELTA);
+        assertEquals("Perimeter is not zero", expectedValue, circle.calculatePerimeter(), Constants.DELTA);
     }
 }

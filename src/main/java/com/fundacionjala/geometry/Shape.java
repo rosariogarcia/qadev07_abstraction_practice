@@ -1,12 +1,19 @@
 package com.fundacionjala.geometry;
 
 /**
- * Created by RosarioGarcia on 6/16/2016.
+ * @author Rosario Garcia
+ * Interface to define methods to calculate area and perimeter of a geometry shape
  */
 public interface Shape {
 
+    /**
+     * This method is used to calculate area of a geometry shape
+     */
     double calculateArea();
 
+    /**
+     * This method is used to calculate perimeter of a geometry shape
+     */
     double calculatePerimeter();
 
 }

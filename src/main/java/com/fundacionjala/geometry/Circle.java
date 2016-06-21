@@ -1,7 +1,11 @@
 package com.fundacionjala.geometry;
 
+import static java.lang.Math.PI;
+import static java.lang.Math.pow;
+
 /**
- * Created by RosarioGarcia on 6/16/2016.
+ * @author Rosario Garcia
+ * Class to calculate area and perimeter of Circle
  */
 public class Circle implements Shape {
 
@@ -11,11 +15,17 @@ public class Circle implements Shape {
         this.radio = radio;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public double calculateArea() {
-        return Math.PI * Math.pow(radio, 2);
+        return PI * pow(radio, Constants.FACTOR_FORMULA);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public double calculatePerimeter() {
-        return 2 * Math.PI * radio;
+        return Constants.FACTOR_FORMULA * PI * radio;
     }
 }

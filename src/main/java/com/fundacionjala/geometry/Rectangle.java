@@ -1,9 +1,11 @@
 package com.fundacionjala.geometry;
 
 /**
- * Created by RosarioGarcia on 6/16/2016.
+ * @author Rosario Garcia
+ * Class to calculate area and perimeter of Rectangle
  */
 public class Rectangle implements Shape {
+
     private double base;
     private double high;
 
@@ -12,11 +14,17 @@ public class Rectangle implements Shape {
         this.high = high;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public double calculateArea() {
         return base * high;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public double calculatePerimeter() {
-        return 2 * base + 2 * high;
+        return Constants.FACTOR_FORMULA * (base + high);
     }
 }

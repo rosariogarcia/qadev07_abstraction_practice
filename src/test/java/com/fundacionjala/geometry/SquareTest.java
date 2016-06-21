@@ -6,7 +6,8 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by RosarioGarcia on 6/16/2016.
+ * @author Rosario Garcia
+ * Tests for {@link Square}
  */
 public class SquareTest {
 
@@ -21,12 +22,12 @@ public class SquareTest {
     @Test
     public void testCalculateSquareArea() {
         int expectedArea = 4;
-        assertEquals(expectedArea, square.calculateArea(), Constants.DELTA);
+        assertEquals("Area is not equal", expectedArea, square.calculateArea(), Constants.DELTA);
     }
 
     @Test
     public void testCalculateSquarePerimeter() {
         int expectedPerimeter = 8;
-        assertEquals(expectedPerimeter, square.calculatePerimeter(), Constants.DELTA);
+        assertEquals("Perimeter is not equal", expectedPerimeter, square.calculatePerimeter(), Constants.DELTA);
     }
 }
