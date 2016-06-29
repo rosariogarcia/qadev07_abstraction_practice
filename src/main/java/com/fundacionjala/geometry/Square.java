@@ -1,9 +1,10 @@
 package com.fundacionjala.geometry;
 
 /**
- * @author Rosario Garcia
  * Class to calculate area and perimeter of Square
- * {@inheritDoc}
+ *
+ * @author Rosario Garcia
+ * @inheritDoc
  */
 public class Square extends Rectangle {
 

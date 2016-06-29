@@ -6,8 +6,9 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * @author Rosario Garcia
  * Tests for {@link Rectangle}
+ *
+ * @author Rosario Garcia
  */
 public class RectangleTest {
 
@@ -22,7 +23,7 @@ public class RectangleTest {
 
     @Test
     public void testCalculateRectanglePerimeter() {
-        int expectedPerimeter = 12;
+        final int expectedPerimeter = 12;
         assertEquals("Perimeter is not equal", expectedPerimeter, rectangle.calculatePerimeter(), Constants.DELTA);
     }
 

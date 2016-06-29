@@ -4,8 +4,9 @@ import static java.lang.Math.PI;
 import static java.lang.Math.pow;
 
 /**
- * @author Rosario Garcia
  * Class to calculate area and perimeter of Circle
+ *
+ * @author Rosario Garcia
  */
 public class Circle implements Shape {
 

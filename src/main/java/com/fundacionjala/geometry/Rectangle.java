@@ -1,8 +1,9 @@
 package com.fundacionjala.geometry;
 
 /**
- * @author Rosario Garcia
  * Class to calculate area and perimeter of Rectangle
+ *
+ * @author Rosario Garcia
  */
 public class Rectangle implements Shape {
 

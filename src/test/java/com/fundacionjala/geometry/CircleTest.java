@@ -8,8 +8,9 @@ import static java.lang.Math.pow;
 import static org.junit.Assert.assertEquals;
 
 /**
- * @author Rosario Garcia
  * Tests for {@link Circle}
+ *
+ * @author Rosario Garcia
  */
 public class CircleTest {
 
@@ -24,27 +25,27 @@ public class CircleTest {
 
     @Test
     public void testCalculateCircleArea() {
-        double expectedArea = PI * pow(RADIO, Constants.FACTOR_FORMULA);
+        final double expectedArea = PI * pow(RADIO, Constants.FACTOR_FORMULA);
         assertEquals("Area is not equal", expectedArea, circle.calculateArea(), Constants.DELTA);
     }
 
     @Test
     public void testCalculateCirclePerimeter() {
-        double expectedPerimeter = Constants.FACTOR_FORMULA * RADIO * PI;
+        final double expectedPerimeter = Constants.FACTOR_FORMULA * RADIO * PI;
         assertEquals("Perimeter is not equal", expectedPerimeter, circle.calculatePerimeter(), Constants.DELTA);
     }
 
     @Test
     public void testCalculateAreaWhenRadioIsZero() {
         circle = new Circle(RADIO_ZERO);
-        int expectedValue = 0;
+        final int expectedValue = 0;
         assertEquals("Area is not zero", expectedValue, circle.calculateArea(), Constants.DELTA);
     }
 
     @Test
     public void testCalculatePerimeterWhenRadioIsZeroShouldBePI() {
         circle = new Circle(RADIO_ZERO);
-        int expectedValue = 0;
+        final int expectedValue = 0;
         assertEquals("Perimeter is not zero", expectedValue, circle.calculatePerimeter(), Constants.DELTA);
     }
 }

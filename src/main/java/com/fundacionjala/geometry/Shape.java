@@ -1,8 +1,9 @@
 package com.fundacionjala.geometry;
 
 /**
- * @author Rosario Garcia
  * Interface to define methods to calculate area and perimeter of a geometry shape
+ *
+ * @author Rosario Garcia
  */
 public interface Shape {
 
